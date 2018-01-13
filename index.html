@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/block.css">
     </head>
     <body>
@@ -11,13 +12,29 @@
 
         <p id="demo"></p>
 
+        <!-- initialize Google directions service -->
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXu1IGkqISPp_CtNOBDIYvmL-7B6nzI2k&callback=initService">
+        </script>
+        <!-- Google Directions API helper -->
+        <script src="js/directions.js"></script>
+
         <script>
         function myFunction() {
             // var t = new Date().getTime();
             // var spot = new Spot();
             // document.getElementById("demo").innerHTML = spot.getTimeStamp();
 
-
+            // GetDirections example
+            // GetDirections("Union Station MA", "South Station MA", 
+            //     function print(ret) {
+            //         console.log(ret.start_addr);
+            //         console.log(ret.end_addr);
+            //         console.log(ret.distance);
+            //         console.log(ret.transport_type);
+            //         console.log(ret.duration);
+            //     }
+            // );
         }
         </script>
 
