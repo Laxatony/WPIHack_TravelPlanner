@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/block.css">
+    </head>
+    <body>
+
+        <p>Click the button to calculate the number of years since midnight, January 1, 1970.</p>
+
+        <button onclick="myFunction()">CreateNewBlock</button>
+
+        <p id="demo"></p>
+
+        <script>
+        function myFunction() {
+            // var t = new Date().getTime();
+            // var spot = new Spot();
+            // document.getElementById("demo").innerHTML = spot.getTimeStamp();
+
+
+        }
+        </script>
+
+        <div id="scheduleTable">
+            <div id="mydiv1" class="mydiv">
+                <div id="mydivheader">Click here to move</div>
+                <p>Spot 1: <input type="text" class="blockSpot"></p>
+                <p>Detail: <input type="text" class="blockSpot"></p>
+            </div>
+
+            <div id="mydiv2" class="mydiv">
+                <div id="mydivheader">Click here to move</div>
+                <p>Spot 2: <input type="text" class="blockSpot"></p>
+                <p>Detail: <input type="text" class="blockSpot"></p>
+            </div>
+        </div>
+
+        <script src="js/TravelObjects.js"></script>
+        <script src="js/DragMotion.js"></script>  
+    </body>
+</html>
