@@ -19,7 +19,10 @@ For these reasons, we want to create a survice that makes trip arrangement more 
 
 ## 3.Project Description
 The project is built using HTML, Javascript and Google Map API. The funtionality is described in [Funtionality] section.
-Currently, it is just a prototype, supporting only trip plan within 2 days.
+Currently, it is just a prototype, supporting only trip plan within 2 days. The schematic view of our application is as follows:
+
+![Image of Prototype](https://github.com/Laxatony/WPIHack_TravelPlanner/blob/master/img/prototype.png)
+
 
 ## 4.Funtionality
 - Add trip spots into Day1 List / Day2 List
