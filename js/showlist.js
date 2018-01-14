@@ -16,7 +16,17 @@ function showlist(){
         	ind+=1;
 
      	//}
-
+		if (j>0) {
+			spoti = day1[j];
+			spoti1 = day1[j-1];
+			var load2 = document.getElementById(new_position[j-1]);
+			GetDirections(spoti1.location, spoti.location, function (ret) {
+				spoti1.nextduration = ret.duration;
+				var upd = load2.getElementsByTagName("div");
+				upd[3].textContent = ret.duration;
+				console.log(upd[3].textContent);
+			}); 
+		}
     }
     day2=[];
     new_position = $(sortable2).sortable('toArray');
@@ -34,8 +44,18 @@ function showlist(){
         	alert(day2[ind].location);
         	ind+=1;
 
-     	//}
-
+		 //}
+		 if (j>0) {
+			spoti = day2[j];
+			spoti1 = day2[j-1];
+			var load2 = document.getElementById(new_position[j-1]);
+			GetDirections(spoti1.location, spoti.location, function (ret) {
+				spoti1.nextduration = ret.duration;
+				var upd = load2.getElementsByTagName("div");
+				upd[3].textContent = ret.duration;
+				console.log(upd[3].textContent);
+			}); 
+		}
     }
 
 }

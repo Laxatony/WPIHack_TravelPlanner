@@ -34,7 +34,7 @@ function addItem2(){
 
     var div4=document.createElement("div");
     div4.setAttribute('id',"des4");
-    div4.append(document.createTextNode("Wait for time"));
+    div4.append(document.createTextNode(""));
   
 
 

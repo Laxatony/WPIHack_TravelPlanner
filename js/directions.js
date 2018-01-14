@@ -6,14 +6,14 @@ var directionsService;
 var destination = [];
 
 var APIHelper = {
-    getDirections: null
+    getDirections: null,
 };
 function initService() {
   //init maps
   geocoder = new google.maps.Geocoder();
   var latlng = new google.maps.LatLng(37.7749, -122.4194);
   var mapOptions = {
-    zoom: 10,
+    zoom: 5,
     center: latlng
   };
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -55,3 +55,11 @@ function GetDirections(start, end, onResponse) {
         console.log("APIHelper is not inited!");
     }
 }
+
+// function SetMapZoom(zoom) {
+//     if (APIHelper.getDirections != null) {
+//         APIHelper.map.setZoom(zoom);
+//     } else {
+//         console.log("APIHelper is not inited!");
+//     }
+// }
