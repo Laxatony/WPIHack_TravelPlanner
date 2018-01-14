@@ -1,7 +1,25 @@
+var geocoder;
+var map;
+var labels = 1;
+var directionsDisplay;
+var directionsService;
+var destination = [];
+
 var APIHelper = {
     getDirections: null
 };
 function initService() {
+  //init maps
+  geocoder = new google.maps.Geocoder();
+  var latlng = new google.maps.LatLng(37.7749, -122.4194);
+  var mapOptions = {
+    zoom: 10,
+    center: latlng
+  };
+  map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
+  directionsDisplay.setMap(map);
+
     function getDirections(start, end, onResponse) {
         var transport = 'DRIVING'
         service = new google.maps.DirectionsService;

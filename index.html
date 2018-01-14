@@ -3,40 +3,42 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/block.css">
+        <link rel="stylesheet" href="css/map.css">
     </head>
     <body>
 
-        <p>Click the button to calculate the number of years since midnight, January 1, 1970.</p>
+        <!-- <p>Click the button to calculate the number of years since midnight, January 1, 1970.</p>
 
         <button onclick="myFunction()">CreateNewBlock</button>
 
-        <p id="demo"></p>
+        <p id="demo"></p> -->
 
         <!-- initialize Google directions service -->
         <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXu1IGkqISPp_CtNOBDIYvmL-7B6nzI2k&callback=initService">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3jRxeVniqYMgtLmrc7zw3puZ-UU0OaCA&callback=initService">
         </script>
         <!-- Google Directions API helper -->
         <script src="js/directions.js"></script>
 
-        <script>
+        <!-- <script>
         function myFunction() {
-            // var t = new Date().getTime();
-            // var spot = new Spot();
-            // document.getElementById("demo").innerHTML = spot.getTimeStamp();
+  // var t = new Date().getTime();
+  // var spot = new Spot();
+  // document.getElementById("demo").innerHTML = spot.getTimeStamp();
+  // GetDirections example
+  // GetDirections("Union Station MA", "South Station MA",
+  //     function print(ret) {
+  //         console.log(ret.start_addr);
+  //         console.log(ret.end_addr);
+  //         console.log(ret.distance);
+  //         console.log(ret.transport_type);
+  //         console.log(ret.duration);
+  //     }
+  // );
+}
+</script> -->
+        <div class="left">
 
-            // GetDirections example
-            // GetDirections("Union Station MA", "South Station MA", 
-            //     function print(ret) {
-            //         console.log(ret.start_addr);
-            //         console.log(ret.end_addr);
-            //         console.log(ret.distance);
-            //         console.log(ret.transport_type);
-            //         console.log(ret.duration);
-            //     }
-            // );
-        }
-        </script>
 
         <div id="scheduleTable">
             <div id="mydiv1" class="mydiv">
@@ -52,7 +54,19 @@
             </div>
         </div>
 
+        </div>
+        <div class="right">
+          <input type="text" class="add__location" id="address" value="oakland">
+          <button type="button" onclick="codeAddress()">Add</button>
+
+          <div id="map">
+          </div>
+
+
+        </div>
+
         <script src="js/TravelObjects.js"></script>
-        <script src="js/DragMotion.js"></script>  
+        <script src="js/DragMotion.js"></script>
+        <script src="js/map.js"></script>
     </body>
 </html>
