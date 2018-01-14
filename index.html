@@ -54,6 +54,15 @@
         } );
         </script>
 
+        <script>
+            var day1=new Array();
+            var day2=new Array();
+            var itemindex=0;
+
+
+        </script>
+
+
     </head>
     <body>
         <h1 align="center">San Francisco Trip</h1>
@@ -63,7 +72,6 @@
         <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3jRxeVniqYMgtLmrc7zw3puZ-UU0OaCA&callback=initService">
         </script>
-
         <div class="container">
 
         <div class="left">
@@ -88,18 +96,23 @@
 
 
             <div class="tripInput" >
-                <input type="text" id="candidate"/>
+                <!--<input type="text" id="candidate"/> -->
+                <div>
                 <button onclick="addItem()">Add trip to day 1</button>
-                <button onclick="removeItem()">Remove trip from day 1</button>
+                </div>
+                <input type="text" id="candidate" style="width: 20px;" /><button onclick="removeItem()">Remove trip from day 1</button>
                 <script src="js/additem.js"></script>
             </div>
 
             <div class="tripInput">
-                <input  type="text" id="candidate2"/>
+                <!--<input  type="text" id="candidate2"/> -->
+                <div>
                 <button onclick="addItem2()">Add item to day 2</button>
-                <button onclick="removeItem2()">Remove trip from day 2</button>
+                </div>
+                <input type="text" id="candidate2" style="width: 20px;"/><button onclick="removeItem2()">Remove trip  from day 2</button>
                 <script src="js/additem2.js"></script>
-                <button onclick="showlist(sortable1)">Show list</button>
+
+                <button onclick="showlist()">show list</button>
                 <script src="js/showlist.js"></script>
             </div>
 

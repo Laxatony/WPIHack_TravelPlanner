@@ -2,10 +2,11 @@ function addItem(){
 
     var ul = document.getElementById("sortable1");
     
-    var candidate = document.getElementById("candidate");
+    var candidate = document.getElementById(itemindex);
     var li = document.createElement("li");
-    li.setAttribute('id',candidate.value);
-    li.appendChild(document.createTextNode(candidate.value));
+    li.setAttribute('id',itemindex);
+    li.appendChild(document.createTextNode(itemindex));
+    itemindex+=1;
 
     var div1=document.createElement("div");
     div1.setAttribute('id',"des1");
@@ -31,7 +32,9 @@ function addItem(){
     input3.type="text";
     input3.className = "css-class-name";
   
-
+    var div4=document.createElement("div");
+    div4.setAttribute('id',"des4");
+    div4.append(document.createTextNode("Wait for time"));
 
     li.appendChild(div1);
     li.appendChild(input1);
@@ -39,6 +42,7 @@ function addItem(){
     li.appendChild(input2);
     li.appendChild(div3);
     li.appendChild(input3);
+    li.appendChild(div4);
     ul.appendChild(li);
     
 

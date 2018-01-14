@@ -2,10 +2,11 @@ function addItem2(){
 
     var ul = document.getElementById("sortable2");
     
-    var candidate = document.getElementById("candidate2");
+    var candidate = document.getElementById(itemindex);
     var li = document.createElement("li");
-    li.setAttribute('id',candidate2.value);
-    li.appendChild(document.createTextNode(candidate2.value));
+    li.setAttribute('id',itemindex);
+    li.appendChild(document.createTextNode(itemindex));
+    itemindex+=1;
 
     var div1=document.createElement("div");
     div1.setAttribute('id',"des1");
@@ -30,6 +31,10 @@ function addItem2(){
     var input3=document.createElement("input");
     input3.type="text";
     input3.className = "css-class-name";
+
+    var div4=document.createElement("div");
+    div4.setAttribute('id',"des4");
+    div4.append(document.createTextNode("Wait for time"));
   
 
 
@@ -39,6 +44,7 @@ function addItem2(){
     li.appendChild(input2);
     li.appendChild(div3);
     li.appendChild(input3);
+    li.appendChild(div4);
     ul.appendChild(li);
     
 
@@ -46,8 +52,11 @@ function addItem2(){
 }
 
 function removeItem2(){
+    
     var ul = document.getElementById("sortable2");
     var candidate2 = document.getElementById("candidate2");
     var item = document.getElementById(candidate2.value);
     ul.removeChild(item);
+    
+
 }

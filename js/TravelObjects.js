@@ -26,6 +26,7 @@ class Spot extends BlockUnit {
         this.name = "";
         this.location = "";
         this.link = "";
+        this.nextduration="";
     }
 }
 
