@@ -20,7 +20,6 @@
 }
 
 #mydivheader {
-
   padding: 10px;
   cursor: move;
   z-index: 10;
@@ -28,35 +27,65 @@
   color: #fff;
 }
 
+.container {
+  width: 100%;
+}
 .left {
+  float: left;
+  width: 400px;
+}
+.right {
+  float: right;
+  width: 400px;
+}
+.center {
+  margin: 0 auto;
+  width: 200px;
+  margin-top: 40px;
+}
+.tripInput {
+  .text-align: left;
+}
+/* .left {
   position: absolute;
   left: 0;
   top: 40px;
-  width: 50%;
+  width: 33%;
+  margin-top: 100px;
+}
+
+.middle{
+  position: relative;
+  left: 0;
+  top: 40px;
+  width: 33%;
+  margin-top: 100px;
+
 }
 
 .right {
   position: absolute;
   right: 0;
   top: 40px;
-  width: 40%;
+  width: 33%;
+  margin-top: 100px;
+} */
+
+#sortable1,
+#sortable2 {
+  border: 1px solid #eee;
+  width: 160px;
+  min-height: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0 0 0;
+  float: left;
+  margin-right: 10px;
 }
-
-
-#sortable1, #sortable2 {
-    border: 1px solid #eee;
-    width: 160px;
-    min-height: 20px;
-    list-style-type: none;
-    margin: 0;
-    padding: 5px 0 0 0;
-    float: left;
-    margin-right: 10px;
-  }
-#sortable1 li, #sortable2 li {
-    margin: 0 5px 5px 5px;
-    padding: 5px;
-    font-size: 1.2em;
-    width: 120px;
-  }
-
+#sortable1 li,
+#sortable2 li {
+  margin: 0 5px 5px 5px;
+  padding: 5px;
+  font-size: 1.2em;
+  width: 120px;
+}
