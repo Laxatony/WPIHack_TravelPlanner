@@ -4,8 +4,6 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/block.css">
         <link rel="stylesheet" href="css/map.css">
-    </head>
-    <body>
 
         <!-- <p>Click the button to calculate the number of years since midnight, January 1, 1970.</p>
 
@@ -37,22 +35,56 @@
   // );
 }
 </script> -->
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery UI Sortable - Connect lists</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+        $( function() {
+            $( "#sortable1, #sortable2" ).sortable({
+                connectWith: ".connectedSortable",
+                update: function(event, ui) {
+        // grabs the new positions now that we've finished sorting
+                    var new_position = $(this).sortable('toArray');
+                    var load=document.getElementById(new_position[0]);
+                    var divs=load.getElementsByTagName("input");
+                    for(var i=0;i<divs.length;i++){
+                        //alert(divs[i].value);
+                    }
+                }
+            }).disableSelection();
+        } );
+        </script>
+
+    </head>
+    <body>
         <div class="left">
+            <ul id="sortable1" class="connectedSortable">
+            </ul>   
 
-
-        <div id="scheduleTable">
-            <div id="mydiv1" class="mydiv">
-                <div id="mydivheader">Click here to move</div>
-                <p>Spot 1: <input type="text" class="blockSpot"></p>
-                <p>Detail: <input type="text" class="blockSpot"></p>
+                
+            <ul id="sortable2" class="connectedSortable">
+            </ul>
+            <div>
+                <input type="text" id="candidate"/>
+                <button onclick="addItem()">add item to date 1</button>
+                <button onclick="removeItem()">remove item from date 1</button>
+                <script src="js/additem.js"></script>
             </div>
-
-            <div id="mydiv2" class="mydiv">
-                <div id="mydivheader">Click here to move</div>
-                <p>Spot 2: <input type="text" class="blockSpot"></p>
-                <p>Detail: <input type="text" class="blockSpot"></p>
+            
+            <div>
+                <input type="text" id="candidate2"/>
+                <button onclick="addItem2()">add item to date 2</button>
+                <button onclick="removeItem2()">remove item from date 2</button>
+                <script src="js/additem2.js"></script>
+                <button onclick="showlist(sortable1)">show list</button>
+                <script src="js/showlist.js"></script>
             </div>
-        </div>
 
         </div>
         <div class="right">
