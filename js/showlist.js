@@ -1,4 +1,8 @@
-function showlist(){
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function showlist(){
     var new_position = $(sortable1).sortable('toArray');
     day1=[];
     var ind=0;
@@ -12,7 +16,7 @@ function showlist(){
         	temp.location=divs[1].value;
         	temp.link=divs[2].value;
         	day1[ind]=temp;
-        	alert(day1[ind].location);
+        	//alert(day1[ind].location);
         	ind+=1;
 
      	//}
@@ -20,13 +24,17 @@ function showlist(){
 			spoti = day1[j];
 			spoti1 = day1[j-1];
 			var load2 = document.getElementById(new_position[j-1]);
+
 			GetDirections(spoti1.location, spoti.location, function (ret) {
 				spoti1.nextduration = ret.duration;
 				var upd = load2.getElementsByTagName("div");
 				upd[3].textContent = ret.duration;
+                
 				console.log(upd[3].textContent);
+                console.log(j);
 			}); 
 		}
+        await sleep(500);
     }
     day2=[];
     new_position = $(sortable2).sortable('toArray');
@@ -41,7 +49,7 @@ function showlist(){
         	temp.location=divs[1].value;
         	temp.link=divs[2].value;
         	day2[ind]=temp;
-        	alert(day2[ind].location);
+        	//alert(day2[ind].location);
         	ind+=1;
 
 		 //}
@@ -56,6 +64,7 @@ function showlist(){
 				console.log(upd[3].textContent);
 			}); 
 		}
+        await sleep(300);
     }
 
 }

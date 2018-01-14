@@ -48,9 +48,9 @@ function initService() {
     APIHelper.getDirections = getDirections;
 }
 
-function GetDirections(start, end, onResponse) {
+ function GetDirections(start, end, onResponse) {
     if (APIHelper.getDirections != null) {
-        APIHelper.getDirections(start, end, onResponse);
+       APIHelper.getDirections(start, end, onResponse);
     } else {
         console.log("APIHelper is not inited!");
     }
