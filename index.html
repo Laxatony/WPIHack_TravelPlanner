@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/block.css">
         <link rel="stylesheet" href="css/map.css">
+        <script src="https://use.fontawesome.com/c2abb0b7da.js"></script>
 
         <!-- <p>Click the button to calculate the number of years since midnight, January 1, 1970.</p>
 
@@ -96,20 +97,42 @@
 
 
             <div class="tripInput" >
+
                 <!--<input type="text" id="candidate"/> -->
                 <div>
-                <button onclick="addItem()">Add trip to day 1</button>
+
                 </div>
-                <input type="text" id="candidate" style="width: 20px;" /><button onclick="removeItem()">Remove trip from day 1</button>
+
+
+                <input  type="text" id="candidate" placeholder="Delete Trip for day 1"/>
+                <div class="">
+
+                <i onclick="addItem()" class="fa fa-calendar-plus-o fa-2x" aria-hidden="true" ></i>
+                <i onclick="removeItem()" class="fa fa-calendar-minus-o fa-2x" aria-hidden="true"></i>
+              </div>
+
+<!--
+                <button onclick="addItem()">Add trip to day 1</button>
+                <button onclick="removeItem()">Remove trip from day 1</button> -->
+
                 <script src="js/additem.js"></script>
             </div>
 
             <div class="tripInput">
+
                 <!--<input  type="text" id="candidate2"/> -->
-                <div>
-                <button onclick="addItem2()">Add item to day 2</button>
-                </div>
-                <input type="text" id="candidate2" style="width: 20px;"/><button onclick="removeItem2()">Remove trip  from day 2</button>
+
+
+                <input  type="text" id="candidate2" placeholder="Delete Trip for day 2"/>
+                <div class="">
+
+                <i onclick="addItem2()" class="fa fa-calendar-plus-o fa-2x" aria-hidden="true"></i>
+                <i onclick="removeItem2()" class="fa fa-calendar-minus-o fa-2x" aria-hidden="true"></i>
+              </div>
+
+                <!-- <button onclick="addItem2()">Add item to day 2</button>
+                <button onclick="removeItem2()">Remove trip from day 2</button> -->
+
                 <script src="js/additem2.js"></script>
 
                 <button onclick="showlist()">show list</button>

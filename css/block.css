@@ -33,6 +33,7 @@
 .left {
   float: left;
   width: 400px;
+  margin-left: 20px;
 }
 .right {
   float: right;
@@ -44,8 +45,11 @@
   margin-top: 40px;
 }
 .tripInput {
-  .text-align: left;
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
+
 /* .left {
   position: absolute;
   left: 0;
